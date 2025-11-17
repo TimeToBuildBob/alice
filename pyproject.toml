@@ -1,0 +1,16 @@
+[project]
+name = "alice-workspace"
+version = "0.1.0"
+description = "Alice AI Agent Workspace"
+requires-python = ">=3.10"
+
+[tool.uv]
+dev-dependencies = [
+    "gptme",
+]
+
+[tool.uv.sources]
+# Use gptme-contrib packages from submodule
+tasks = { path = "gptme-contrib/packages/tasks", editable = true }
+lessons = { path = "gptme-contrib/packages/lessons", editable = true }
+lib = { path = "gptme-contrib/packages/lib", editable = true }

@@ -17,10 +17,10 @@
 set -e  # Exit on error
 
 # === CONFIGURATION (CUSTOMIZE THESE) ===
-AGENT_NAME="YourAgent"  # Replace with your agent's name
-WORKSPACE="/path/to/your/workspace"  # Replace with your workspace path
-REPO_OWNER="your-github-username"  # Replace with your GitHub username
-REPO_NAME="your-agent-workspace"  # Replace with your workspace repo name
+AGENT_NAME="Alice"
+WORKSPACE="/home/bob/alice"
+REPO_OWNER=""  # No GitHub remote yet
+REPO_NAME=""  # No GitHub remote yet
 SCRIPT_TIMEOUT=3000  # 50 minutes in seconds (allows hourly scheduling with buffer)
 # ========================================
 
