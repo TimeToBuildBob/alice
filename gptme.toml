@@ -1,0 +1,14 @@
+files = [
+  "README.md",
+  "ARCHITECTURE.md",
+  "ABOUT.md",
+  "TASKS.md",
+  "TOOLS.md",
+  "lessons/README.md",
+  "projects/README.md",
+  "gptme.toml"
+]
+context_cmd = "scripts/context.sh"
+
+[agent]
+name = "Alice"
