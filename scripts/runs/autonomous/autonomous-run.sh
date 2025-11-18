@@ -164,7 +164,7 @@ EOF
 
 # Run gptme with the autonomous prompt (with timeout)
 log "Starting gptme session..."
-timeout $SCRIPT_TIMEOUT gptme --non-interactive "$PROMPT_FILE" 2>&1 || EXIT_CODE=$?
+timeout $SCRIPT_TIMEOUT /home/bob/.local/bin/gptme --non-interactive "$PROMPT_FILE" 2>&1 || EXIT_CODE=$?
 EXIT_CODE=${EXIT_CODE:-0}
 
 # Check exit status
