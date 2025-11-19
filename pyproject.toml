@@ -4,8 +4,8 @@ version = "0.1.0"
 description = "Alice AI Agent Workspace"
 requires-python = ">=3.10"
 
-[tool.uv]
-dev-dependencies = [
+[dependency-groups]
+dev = [
     "gptme",
 ]
 
