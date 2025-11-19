@@ -2,7 +2,7 @@
 state: done
 created: 2025-11-17T17:10:00Z
 priority: high
-tags: [milestone, autonomous, @alice]
+tags: [milestone, autonomous, alice]
 ---
 # Complete First Autonomous Run
 
