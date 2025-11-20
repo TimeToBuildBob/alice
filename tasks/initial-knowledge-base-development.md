@@ -1,6 +1,6 @@
 ---
 state: done
-created: 2025-11-19
+created: 2025-11-19T09:00:00Z
 priority: medium
 tags: [knowledge-base, documentation, autonomous]
 ---
