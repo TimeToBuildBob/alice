@@ -38,13 +38,13 @@ repos:
       - id: validate-task-frontmatter
         name: Validate task frontmatter
         description: Validates YAML frontmatter in task files
-        entry: ./scripts/precommit/validate_task_frontmatter.py
+        entry: bash -c 'PATH="/home/bob/.local/bin:$PATH" ./scripts/precommit/validate_task_frontmatter.py "$@"' --
         language: system
         types: [markdown]
         files: ^tasks/.*\.md$
       - id: validate-task-metadata
         name: Validate task metadata
-        entry: bash -c 'if [ -x "./scripts/tasks.py" ]; then ./scripts/tasks.py check; else echo "tasks.py not found (optional) - skipping validation"; fi'
+        entry: bash -c 'PATH="/home/bob/.local/bin:$PATH"; if [ -x "./scripts/tasks.py" ]; then ./scripts/tasks.py check; else echo "tasks.py not found (optional) - skipping validation"; fi'
         language: system
         types: [markdown]
         files: ^tasks/.*\.md$
