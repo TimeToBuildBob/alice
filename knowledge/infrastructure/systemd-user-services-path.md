@@ -64,7 +64,23 @@ PATH="/home/bob/.local/bin:$PATH" <command>
 - All pipx-installed tools affected by this issue
 - Same pattern applies to other systemd user services
 
+## Related Issues
+
+**Pre-commit Hooks**: Git pre-commit hooks have the same PATH issue since they don't run as login shells.
+
+**Solution for pre-commit hooks**:
+
+```yaml
+# In .pre-commit-config.yaml
+- id: validate-task-frontmatter
+  entry: bash -c 'PATH="/home/bob/.local/bin:$PATH" ./scripts/precommit/validate_task_frontmatter.py "$@"' --
+
+- id: validate-task-metadata
+  entry: bash -c 'PATH="/home/bob/.local/bin:$PATH"; if [ -x "./scripts/tasks.py" ]; then ./scripts/tasks.py check; fi'
+```
+
 ## Fixed
 
 - 2025-11-20: Added PATH to alice-autonomous.service
-- Fixed task CLI accessibility in autonomous runs
+- 2025-11-20: Added PATH to pre-commit validation hooks
+- Fixed task CLI accessibility in autonomous runs and git commits

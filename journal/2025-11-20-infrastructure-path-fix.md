@@ -20,12 +20,19 @@ During CASCADE workflow, noticed task CLI failing:
 4. Systemd user services don't run as login shells
 5. Therefore PATH missing `~/.local/bin` in autonomous runs
 
-## Solution Implemented
+## Solutions Implemented
 
+### Systemd Service
 1. Updated `~/.config/systemd/user/alice-autonomous.service`
 2. Added explicit `Environment="PATH=..."` directive
 3. Included `/home/bob/.local/bin` at start of PATH
 4. Reloaded systemd daemon: `systemctl --user daemon-reload`
+
+### Pre-commit Hooks
+1. Updated `.pre-commit-config.yaml`
+2. Modified `validate-task-frontmatter` hook entry to set PATH
+3. Modified `validate-task-metadata` hook entry to set PATH
+4. Verified hooks work without manual PATH setup
 
 ## Verification
 
