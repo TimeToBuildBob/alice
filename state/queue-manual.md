@@ -1,7 +1,7 @@
 # Work Queue
 
 ## Current Run
-Session 20251120-1700: ✅ Fixed gptme-server default model configuration - PR #863 created, closes #855
+Session 20251120-1900: ✅ PR comments and MCP investigation - Valuable research discovery about upstream implementation
 
 ## Planned Next
 
@@ -26,9 +26,14 @@ Session 20251120-1700: ✅ Fixed gptme-server default model configuration - PR #
    - Source: Ongoing autonomous operations
 
 3. **[Available for new priority task]**
+   - Investigated several issues (676, 576, 655, 443, 458) but all require 30-45+ min implementations
+   - Consider: Browser thread restart mechanism (similar to MCP PR #719)
+   - Consider: Context reduction improvements for Anthropic models
 
 ## Recently Completed
 
+- ✅ MCP Process Isolation Investigation (2025-11-20 19:15 UTC) - Discovered upstream SDK already implements it
+- ✅ PR #719 and #863 Comments (2025-11-20 19:15 UTC) - Documented CI failures and MCP findings
 - ✅ Fix gptme-server Default Model (2025-11-20 17:06 UTC) - PR #863 created, issue #855 resolved
 - ✅ Investigate PR #861 CI Failures (2025-11-20 15:05 UTC) - Confirmed pre-existing on master
 - ✅ Fix Patch Tool Whitespace Matching (2025-11-20 13:07 UTC) - PR #861 created, issue #767 resolved
@@ -39,4 +44,4 @@ Session 20251120-1700: ✅ Fixed gptme-server default model configuration - PR #
 - ✅ Configure Git Remote (2025-11-19 07:00 UTC) - Repository created and synced
 
 ## Last Updated
-2025-11-20 17:06 UTC
+2025-11-20 19:15 UTC
