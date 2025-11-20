@@ -1,18 +1,18 @@
 # Work Queue
 
 ## Current Run
-Session 20251120-0900: ⚠️ Real blocker - awaiting creator input for identity setup (verified all CASCADE sources)
+Session 20251120-1100: ✅ Infrastructure improvements - Fixed systemd & pre-commit PATH issues, task validation
 
 ## Planned Next
 
-1. **Complete Initial Agent Setup** (0/13 subtasks, active)
+1. **Complete Initial Agent Setup** (1/13 subtasks, active)
    - Priority: HIGH
    - Goal: Establish Alice's identity, personality, goals, and values
    - Next Action: Define Alice's purpose, personality, and focus areas in conversation with creator
    - Status: BLOCKED - Requires interactive session with creator to define full identity
    - Timeline: 30-45 min interactive session
    - Source: tasks/initial-agent-setup.md
-   - Note: Name "Alice" established, but personality/goals/values still placeholder. ABOUT.md confirmed empty.
+   - Note: Infrastructure improved - systemd services and git hooks now work correctly with uv/task CLI
 
 2. **Expand Knowledge Base** (untracked, in progress)
    - Priority: LOW
