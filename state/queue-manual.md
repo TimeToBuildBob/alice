@@ -1,38 +1,42 @@
 # Work Queue
 
 ## Current Run
-Session 20251122-1301: ✅ Completed issue #789 - Created comprehensive unit tests for GptmeReasoningProgram in PR #870. 327 lines of tests covering all signature classes, integration flows, and edge cases. CI checks running.
+Session 20251122-1625: ✅ Fixed PR #870 CI failures - Resolved lint/typecheck errors (import sorting, EvalSpec fixture). Lint and typecheck now passing. Remaining test failures are pre-existing API key issues. Searched for new work (15+ min) - most issues too complex for single session or already being addressed.
 
 ## Planned Next
 
-1. **Monitor PR #870** (LOW priority)
+1. **PR #870 Ready for Review** (LOW priority)
    - Priority: LOW
-   - Goal: Monitor CI results and address any review feedback for reasoning program tests
-   - Next Action: Check CI results, respond to reviews if needed
-   - Status: ACTIVE - PR just created, CI checks running
-   - Timeline: 5-10 min for monitoring, varies for revisions
-   - Source: PR #870 (created this session)
-   - Impact: Closes issue #789, improves test coverage for reasoning_program.py
+   - Goal: Await review and merge for reasoning program tests
+   - Next Action: Monitor for review feedback from Erik
+   - Status: READY - Lint/typecheck passing, pre-existing test failures documented
+   - Timeline: Awaiting maintainer review
+   - Source: PR #870 (closes #789)
+   - Impact: Comprehensive unit tests for GptmeReasoningProgram
    - Link: https://github.com/gptme/gptme/pull/870
 
-2. **Monitor PR #869** (LOW priority)
+2. **PR #869 Ready for Review** (LOW priority)
    - Priority: LOW
-   - Goal: Monitor CI and review feedback for documentation PR
-   - Next Action: Check CI results, address any review comments
-   - Status: ACTIVE - PR from previous session, awaiting review
-   - Timeline: 5-10 min for monitoring, varies for revisions
-   - Source: PR #869 (created previous session)
-   - Impact: Closes issue #788, improves DSPy PromptOptimizer documentation
+   - Goal: Await review and merge for documentation PR
+   - Next Action: Monitor for review feedback
+   - Status: READY - Same pre-existing test failures as #870
+   - Timeline: Awaiting maintainer review
+   - Source: PR #869 (closes #788)
+   - Impact: DSPy PromptOptimizer documentation
    - Link: https://github.com/gptme/gptme/pull/869
 
-3. **Continue Exploring Issues for Quick Wins** (LOW priority)
-   - Priority: LOW
-   - Goal: Find additional small, actionable issues for autonomous work
-   - Next Action: Review remaining open issues for documentation, bugs, or small enhancements
-   - Status: READY - Issue list available, #788 and #789 completed
-   - Timeline: 20-30 min (varies by issue)
-   - Source: GitHub issue list
-   - Note: Focus on clear scope with verification
+3. **Improve Issue Labeling for Autonomous Work** (MEDIUM priority)
+   - Priority: MEDIUM
+   - Goal: Better identify autonomous-friendly issues
+   - Next Action: Review open issues and suggest labeling improvements
+   - Status: NEEDS DISCUSSION - Current labels don't clearly indicate autonomous-friendly work
+   - Timeline: 15-20 min
+   - Note: Many issues are complex, already being worked on by Erik, or need design discussion
+   - Findings:
+     - #655 has PR #656 by Erik (Ctrl+V paste)
+     - #492 addressed by PR #828 (Perplexity search)
+     - Most open issues are enhancements needing design or complex bugs
+     - "good first issue" label rarely used
 
 4. **PR #776 - NOT VIABLE** (Blocked)
    - Priority: BLOCKED
@@ -77,4 +81,4 @@ Session 20251122-1301: ✅ Completed issue #789 - Created comprehensive unit tes
 - ✅ PR #865 CI Analysis (2025-11-21 12:50 UTC) - Comprehensive review confirming test failures pre-existing, PR merged
 
 ## Last Updated
-2025-11-22 13:03 UTC
+2025-11-22 16:52 UTC
