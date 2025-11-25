@@ -1,53 +1,60 @@
 # Work Queue
 
 ## Current Run
-Session 20251125-1300: ✅ PR #879 CI Fixed - Resolved Sphinx build failure by adding hooks-design.md to main documentation toctree. All checks now passing, ready for maintainer review.
+Session 20251125-1500: Discovered PR #879 closed (not merged), updating work queue to reflect accurate state and checking for autonomous-friendly work.
 
 ## Planned Next
 
-1. **PR #879 Skills Hook System (Phase 4.2)** (HIGH priority)
-   - Priority: HIGH (continuation of merged Phase 4.1, autonomous-friendly)
-   - Goal: Get Phase 4.2 hook system implementation merged
-   - Status: READY - All CI checks passing, awaiting maintainer review
-   - Implementation: Complete with hooks.py, tests, documentation, example skill
-   - CI Status: ✅ All checks passing (build, lint, typecheck, tests, Docker, PyInstaller)
-   - Next Action: Await maintainer review and feedback
-   - Timeline: Ready for review
-   - Source: PR #879 (Phase 4.2 of Issue #686)
-   - Link: https://github.com/gptme/gptme/pull/879
-   - Related: Issue #686, PR #877 (Phase 4.1 merged)
-   - Updates:
-     - 2025-11-25 13:08: Fixed Sphinx build failure - added hooks-design to toctree
-     - 2025-11-25 11:05: PR #879 created with hook system implementation
+1. **Issue #686 Phase 1: Research Cursor Rules Format** (MEDIUM priority)
+   - Priority: MEDIUM (autonomous-friendly research task)
+   - Goal: Understand Cursor rules format for cross-system compatibility
+   - Status: NOT STARTED - Research needed
+   - Action: Use Perplexity to research Cursor rules file structure
+   - Tasks:
+     - Analyze Cursor rules file structure and metadata
+     - Identify compatibility points with lesson system
+     - Document differences and design decisions
+   - Timeline: 1-2 hours
+   - Source: Issue #686 Phase 1
+   - Link: https://github.com/ErikBjare/gptme/issues/686
 
-2. **Complete Initial Agent Setup** (LOW priority, partial progress)
-   - Priority: LOW
+2. **Apply Enhanced Labels to gptme Issues** (LOW priority)
+   - Priority: LOW (maintenance work, judgment calls required)
+   - Goal: Implement Issue #874 labeling system across open issues
+   - Status: Labels created by Erik, need application
+   - Action: Review open issues and apply difficulty/status/priority labels
+   - Timeline: 2-3 hours
+   - Source: Issue #874
+   - Link: https://github.com/ErikBjare/gptme/issues/874
+   - Note: Erik expects inconsistent application, set precedent carefully
+
+3. **Complete Initial Agent Setup** (LOW priority, requires human)
+   - Priority: LOW (not autonomous-friendly)
    - Goal: Establish Alice's identity, personality, goals, and values
    - Progress: ✅ Foundational ABOUT.md drafted (2025-11-23)
-   - Next Action: Interactive session with creator to review and refine identity
+   - Next Action: Interactive session with creator to review and refine
    - Status: PARTIAL - Foundation established, needs creator confirmation
-   - Timeline: 20-30 min interactive session for refinement
+   - Timeline: 20-30 min interactive session
    - Source: tasks/initial-agent-setup.md
-   - Note: Not autonomous-friendly, requires human interaction
+   - Note: Requires human interaction for identity refinement
 
-3. **PR #776 - NOT VIABLE** (Blocked)
-   - Priority: BLOCKED
-   - Status: 76 commits behind, massive architectural divergence
-   - Recommendation: Feature needs complete recreation from scratch
-   - Next Action: Discuss with Erik about recreating feature
-
-4. **PR #723 - NOT VIABLE** (Blocked)
-   - Priority: BLOCKED
-   - Status: 137 commits behind, massive architectural divergence
-   - Recommendation: Feature needs complete recreation from scratch
-   - Next Action: Discuss with Erik about recreating feature
+4. **Issue #686 Phase 6: Documentation and Testing** (MEDIUM priority)
+   - Priority: MEDIUM (some parts autonomous-friendly)
+   - Goal: Document enhanced lesson system
+   - Status: NOT STARTED
+   - Potential Actions:
+     - Draft user guide for lesson system
+     - Create examples of metadata and triggers
+     - Add tests for new functionality
+   - Timeline: 3-4 hours
+   - Source: Issue #686 Phase 6
+   - Link: https://github.com/ErikBjare/gptme/issues/686
 
 ## Recently Completed
 
-- ✅ **PR #879 CI Build Fixed** (2025-11-25 13:08 UTC) - Resolved Sphinx warning by adding skills/hooks-design to main documentation toctree in index.rst, all checks now passing
-- ✅ **PR #879 Hook System Implementation** (2025-11-25 11:05 UTC) - Implemented Phase 4.2 of Issue #686: hook system for skills with comprehensive tests and documentation (https://github.com/gptme/gptme/pull/879)
-- ✅ **PR #877 Skills Refactoring MERGED** (2025-11-25 09:11 UTC) - Refactored skills to Anthropic format (https://github.com/gptme/gptme/pull/877)
-- ✅ **PR #873 Plugin Management MERGED** (2025-11-25 07:10 UTC) - Enhanced plugin management with smart src/ layout discovery (https://github.com/gptme/gptme/pull/873)
+- ✅ **PR #879 Closed - Architectural Clarification** (2025-11-25 13:30 UTC) - PR closed (not merged) because hooks belong in plugins, not skills. Erik clarified: Skills = simple Anthropic folder format (SKILL.md + resources), Plugins = deep integration (hooks/tools/commands in Python packages). Example plugin with hooks created and merged in gptme-contrib#31. Key learning: Skills should remain lightweight knowledge bundles, hooks are plugin infrastructure. (https://github.com/ErikBjare/gptme/pull/879)
+- ✅ **PR #877 Skills Refactoring MERGED** (2025-11-25 09:11 UTC) - Refactored skills to Anthropic format (https://github.com/ErikBjare/gptme/pull/877)
+- ✅ **PR #873 Plugin Management MERGED** (2025-11-25 07:10 UTC) - Enhanced plugin management with smart src/ layout discovery (https://github.com/ErikBjare/gptme/pull/873)
 
 ## Last Updated
-2025-11-25 13:08 UTC
+2025-11-25 15:08 UTC
