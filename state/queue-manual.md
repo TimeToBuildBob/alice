@@ -1,18 +1,21 @@
 # Work Queue
 
 ## Current Run
-Session 20251125-1900: ✅ Verified PR #882 merged, fixed PR #776 typecheck (CI pending).
+Session 20251125-1900: ✅ PR #882 verified (merged), fixed PR #776 typecheck (3 commits, CI in progress).
 
 ## Planned Next
 
-1. **Monitor PR #776 CI Verification** (HIGH priority)
-   - Priority: HIGH (active fix, CI running)
-   - Goal: Verify typecheck fix passes CI
-   - Status: FIX APPLIED - CI running (commit e24f9b92b)
-   - Actions: Monitor CI, address any remaining issues if typecheck fails
-   - Timeline: Wait for CI (~5-10 min), then respond to results
+1. **Verify PR #776 CI Results** (HIGH priority)
+   - Priority: HIGH (active fix, awaiting CI completion)
+   - Goal: Verify all 3 typecheck fixes resolved the errors
+   - Status: FIXES APPLIED - CI running (commits e24f9b92b, 00d368063, c7a281901)
+   - Actions: Check CI results when complete, address any remaining issues
+   - Timeline: CI completion (typically 5-10 min)
    - Link: https://github.com/gptme/gptme/pull/776
-   - Fix: Added type cast for ToolParam in _spec2tool function
+   - Fixes Applied:
+     - Fix 1: Added cast to _spec2tool() return value
+     - Fix 2: Added cast to _make_schema_tool() return value + fixed return type
+     - Fix 3: Added explicit type annotations to schema_tool variables (2 locations)
 
 2. **Apply Enhanced Labels to gptme Issues** (LOW priority)
    - Priority: LOW (maintenance work, judgment calls required)
@@ -36,11 +39,9 @@ Session 20251125-1900: ✅ Verified PR #882 merged, fixed PR #776 typecheck (CI 
 
 ## Recently Completed
 
-- ✅ **PR #776 Typecheck Fix** (2025-11-25 19:05 UTC) - Fixed failing typecheck in gptme/llm/llm_anthropic.py by adding type cast for ToolParam. Applied fix (commit e24f9b92b), pushed to origin/constrained-decoding. CI verification pending. (https://github.com/gptme/gptme/pull/776)
+- ✅ **PR #776 Typecheck Fixes** (2025-11-25 19:19 UTC) - Applied 3 commits to fix typecheck errors in gptme/llm/llm_anthropic.py: (1) Added cast to _spec2tool function, (2) Added cast + return type to _make_schema_tool function, (3) Added explicit type annotations to schema_tool variables. All fixes pushed to origin/constrained-decoding. CI verification in progress. (https://github.com/gptme/gptme/pull/776)
 - ✅ **PR #882 Merge Verification** (2025-11-25 19:02 UTC) - Verified successful merge of PR #882 (Cursor .mdc support) to gptme master. Issue #686 closed as COMPLETED. All CI checks passed, 94.82% coverage. (https://github.com/gptme/gptme/pull/882)
 - ✅ **Issue #686 Phase 5 - Cursor .mdc Support** (2025-11-25 17:10 UTC) - Implemented complete Cursor .mdc rules support in gptme. Extended parser with Cursor-specific fields (globs, priority, triggers, alwaysApply), implemented glob-to-keyword translation (25+ extensions), added metadata conversion, extended index to discover .cursor/ directories, created 19 comprehensive tests. Created PR #882. Implementation docs: knowledge/technical/cursor-mdc-implementation.md. (https://github.com/gptme/gptme/pull/882)
-- ✅ **Issue #686 Phase 1 - Cursor Rules Research** (2025-11-25 15:19 UTC) - Completed comprehensive research on Cursor .mdc rules format using Perplexity, documented detailed comparison with gptme lessons, analyzed compatibility challenges, provided recommendations for Phase 5 implementation. Research document: knowledge/technical/cursor-rules-format-research.md. Posted findings to GitHub issue. (https://github.com/gptme/gptme/issues/686#issuecomment-3576141034)
-- ✅ **PR #879 Closed - Architectural Clarification** (2025-11-25 13:30 UTC) - PR closed (not merged) because hooks belong in plugins, not skills. Erik clarified: Skills = simple Anthropic folder format (SKILL.md + resources), Plugins = deep integration (hooks/tools/commands in Python packages). Example plugin with hooks created and merged in gptme-contrib#31. Key learning: Skills should remain lightweight knowledge bundles, hooks are plugin infrastructure. (https://github.com/ErikBjare/gptme/pull/879)
 
 ## Last Updated
-2025-11-25 19:08 UTC
+2025-11-25 19:23 UTC

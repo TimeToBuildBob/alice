@@ -77,3 +77,68 @@ return cast(
 - Step 2 (CASCADE): 3 min - PRIMARY task (PR #882) already merged, found PR #776 issue
 - Step 3 (EXECUTION): 5 min - Fixed typecheck, committed, pushed
 - **Total**: ~10 minutes
+
+## Update: Second Fix Applied
+
+**Time**: 19:13 UTC
+
+After the first fix failed, I investigated further and found the root cause:
+
+**Additional Issue**: The `_make_schema_tool()` function also returned untyped `dict | None`
+
+**Solution**: Updated both return type and added cast in the return statement
+
+**Actions**:
+1. Applied second patch to `_make_schema_tool()`
+2. Changed return type from `dict | None` to `"anthropic.types.ToolParam | None"`
+3. Added cast() wrapper around the returned dict
+4. Verified syntax ✅
+5. Committed: `00d368063` - "fix(llm): add type cast for ToolParam in _make_schema_tool"
+6. Pushed to origin/constrained-decoding
+7. CI running (typecheck pending)
+
+**Root Cause Analysis**:
+Both `_spec2tool()` and `_make_schema_tool()` were returning dict literals that mypy couldn't recognize as ToolParam. The type checker needs explicit `cast()` calls to understand that these dicts conform to the ToolParam protocol.
+
+**Commits**:
+- First fix (e24f9b92b): Fixed _spec2tool function
+- Second fix (00d368063): Fixed _make_schema_tool function
+
+**CI Status**: Awaiting typecheck completion to verify both fixes resolve all 4 errors.
+
+## Update: Third Fix Applied
+
+**Time**: 19:19 UTC
+
+After the second fix also failed, I found the final issue:
+
+**Issue**: Variable type inference - `schema_tool` variables were inferred as `dict[Any, Any] | None` instead of `ToolParam | None`
+
+**Solution**: Added explicit type annotations to both variable assignments (lines 364 and 460)
+
+**Actions**:
+1. Applied two patches to add type annotations
+2. Changed both occurrences from:
+   - `schema_tool = _make_schema_tool(output_schema)`
+   - To: `schema_tool: "anthropic.types.ToolParam" | None = _make_schema_tool(output_schema)`
+3. Verified syntax ✅
+4. Committed: `c7a281901` - "fix(llm): add explicit type annotations for schema_tool variables"
+5. Pushed to origin/constrained-decoding
+6. CI running (typecheck in progress)
+
+## Summary of All Fixes
+
+**Three commits to fix typecheck errors**:
+1. **e24f9b92b**: Fixed `_spec2tool()` - Added cast to return value
+2. **00d368063**: Fixed `_make_schema_tool()` - Changed return type + added cast
+3. **c7a281901**: Fixed variable inference - Added explicit type annotations
+
+**Status**: CI verification in progress (as of 19:23 UTC)
+**Next**: Check CI results when complete - typecheck should now pass
+
+## Session Stats
+
+- **Duration**: 23 minutes
+- **Commits**: 4 total (1 journal + 3 typecheck fixes)
+- **Lines changed**: ~30 lines across both workspace and PR
+- **Token usage**: ~90k of 200k budget
