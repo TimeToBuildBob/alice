@@ -1,29 +1,28 @@
 # Work Queue
 
 ## Current Run
-Session 20251125-0700: ✅ PR #876 CI Analysis Complete - Investigated failures (infrastructure timeout + pre-existing test timeout), documented findings, triggered re-run, created Phase 4.2 planning. Test failure confirmed unrelated to skills infrastructure.
+Session 20251125-0900: ✅ PR #877 Created - Refactored skills to Anthropic format addressing Erik's review feedback. Created new PR #877 to replace #876, implemented folder structure, requirements.txt, and parser updates.
 
 ## Planned Next
 
-1. **PR #876 Skills Infrastructure** (MEDIUM priority)
-   - Priority: MEDIUM (new feature, extends lesson system)
-   - Goal: Get Phase 4.1 skills infrastructure merged
-   - Status: DOCUMENTED - CI re-run in progress, test failure analyzed and documented as pre-existing
-   - Investigation: Comprehensive CI failure analysis completed
-     - Failure 1: 52m infrastructure timeout (GitHub runner issue)
-     - Failure 2: test_event_stream_with_generation timeout (pre-existing, makes real API calls)
-   - Assessment: Test failures NOT related to skills infrastructure changes
-   - Documentation: Two detailed PR comments explaining findings
-   - CI Status: 8/10 checks passing, 2 long-running tests pending
-   - Next Action: Await maintainer review/merge decision
-   - Timeline: Awaiting maintainer review
-   - Source: PR #876 (Issue #686 Phase 4.1)
-   - Link: https://github.com/gptme/gptme/pull/876
-   - Planning: Phase 4.2 planning document created (hook system design)
+1. **PR #877 Skills Infrastructure (Anthropic Format)** (HIGH priority)
+   - Priority: HIGH (maintainer feedback addressed, ready for review)
+   - Goal: Get refactored skills implementation merged
+   - Status: READY - Complete refactoring following Anthropic's skill format
+   - Implementation:
+     - Directory: gptme/lessons/skills/python-repl/SKILL.md (unified tree)
+     - Format: Anthropic YAML (name, description only)
+     - Dependencies: requirements.txt (language-agnostic)
+     - Parser: Supports both lesson and skill formats (backward compatible)
+   - Review Comments: All 6 inline comments from Erik addressed
+   - Next Action: Await maintainer review on new PR
+   - Timeline: Awaiting Erik's review
+   - Source: PR #877 (replaces #876)
+   - Link: https://github.com/gptme/gptme/pull/877
+   - Related: Issue #686 Phase 4.1, PR #876
    - Updates:
-     - 2025-11-25 07:00: CI failure investigation complete, documented findings
-     - 2025-11-25 07:02: CI re-run triggered
-     - 2025-11-25 07:10: Re-run results analyzed, test failure confirmed pre-existing
+     - 2025-11-25 09:11: PR #877 created with complete refactoring
+     - 2025-11-25 09:11: Comment posted on PR #876 linking to #877
 
 2. **PR #873 CI Timeout Documented** (LOW priority)
    - Priority: LOW (downgraded from MEDIUM)
@@ -82,6 +81,7 @@ Session 20251125-0700: ✅ PR #876 CI Analysis Complete - Investigated failures 
 
 ## Recently Completed
 
+- ✅ **PR #877 Skills Refactoring Complete** (2025-11-25 09:11 UTC) - Refactored skills to Anthropic format addressing all Erik's review feedback: folder structure, SKILL.md, requirements.txt, parser updates, documentation updates (https://github.com/gptme/gptme/pull/877)
 - ✅ **PR #876 CI Investigation Complete** (2025-11-25 07:10 UTC) - Comprehensive CI failure analysis, root causes identified, documented in 2 PR comments, CI re-run triggered and monitored
 - ✅ **Skills Phase 4.2 Planning** (2025-11-25 07:05 UTC) - Created comprehensive planning document for hook system implementation (next phase after PR #876 merges)
 - ✅ **Skills Infrastructure Implemented** (2025-11-24 19:15 UTC) - PR #876 implements Phase 4.1 of Issue #686 with skills parser support, example skill, and documentation (https://github.com/gptme/gptme/pull/876)
@@ -94,4 +94,4 @@ Session 20251125-0700: ✅ PR #876 CI Analysis Complete - Investigated failures 
 - ✅ **PR #869 MERGED** (2025-11-22 09:08 UTC) - DSPy PromptOptimizer documentation for use_reasoning_program parameter (closes #788)
 
 ## Last Updated
-2025-11-25 07:10 UTC
+2025-11-25 09:11 UTC
