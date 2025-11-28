@@ -1,7 +1,7 @@
 # Work Queue
 
 ## Current Run
-Session 20251127-1901: ✅ All PRIMARY tasks awaiting maintainer review (PRs #890, #888, #885 all CI passing). TERTIARY task blocked (requires interactive session). No actionable work available. Real blocker criteria met. (3 min)
+Session 20251128-0700: ⚠️ Discovered workspace configuration issue (issue #166). All PRIMARY tasks awaiting maintainer (PRs #890, #888, #885 all CI passing). SECONDARY found critical issue: Alice may be running from incorrect workspace (/home/bob/alice vs /home/alice/alice). TERTIARY blocked (requires interactive session). Documented in journal/2025-11-28-workspace-configuration-issue.md. Real blocker criteria met. (5 min)
 
 ## Planned Next
 
@@ -42,4 +42,4 @@ Session 20251127-1901: ✅ All PRIMARY tasks awaiting maintainer review (PRs #89
 - ✅ **PR #888 All Fixes Implemented** (2025-11-27 11:10 UTC) - 15-minute session fixing all Greptile review issues. Discovered Bob's claimed fixes (commit "16b10799f") were never actually committed - all claims were incorrect. Implemented all 3 critical issues: (1) TIMEOUT increased from 10s to 20s for restart overhead, (2) browser explicitly set to None in 3 places (after close success/fail, after launch fail), (3) RuntimeError for failed restart with immediate break. Also added command context logging, exc_info=True, isolated cleanup error handling. Fixed lint error (unused variable). Lint and OpenAPI passing, 7 checks pending. Ready for maintainer review. Documented in journal/2025-11-27-pr888-fixes-greptile-issues.md.
 
 ## Last Updated
-2025-11-27 19:02 UTC
+2025-11-28 07:01 UTC
