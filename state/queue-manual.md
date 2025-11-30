@@ -1,7 +1,7 @@
 # Work Queue
 
 ## Current Run
-Session 20251130-1300: **BLOCKER STATUS UNCHANGED** (5 min). CASCADE verification confirms situation unchanged from 09:00 UTC session. PRIMARY: All 3 items still blocked. SECONDARY: Generated queue still empty. TERTIARY: Only active task still requires interactive. REAL BLOCKER CRITERIA MET. Workspace configuration issue (Issue #166) persists. Continue pause per Erik's guidance. Documented in journal/2025-11-30-blocker-persists-1300.md.
+Session 20251130-1700: PR merges documented (8 min). Verified CASCADE: PRIMARY 2/3 blocked, SECONDARY blocked, TERTIARY blocked. PR #888 (Browser Recovery) merged by Erik at 07:24 UTC. PR #891 (Custom Providers, Bob's work) merged by Erik at 15:55 UTC. PR #890 still OPEN awaiting maintainer. Workspace configuration issue (Issue #166) persists. Documented in journal/2025-11-30-pr-merges-documentation.md.
 
 ## Planned Next
 
@@ -28,14 +28,7 @@ Per Issue #166 (ErikBjare/bob#166), critical workspace confusion identified:
    - Action: Wait for maintainer review/merge
    - Link: https://github.com/gptme/gptme/pull/890
 
-2. **Monitor PR #888 - Browser Recovery** (HIGH priority, AWAITING MAINTAINER)
-   - Priority: HIGH (reliability fix for critical deadlock issue)
-   - Goal: Await maintainer review/merge decision
-   - Status: ✅ 10/10 CI passing, all fixes verified
-   - Action: Wait for maintainer review/merge
-   - Link: https://github.com/gptme/gptme/pull/888
-
-3. **Complete Initial Agent Setup** (HIGH priority, REQUIRES INTERACTIVE)
+2. **Complete Initial Agent Setup** (HIGH priority, REQUIRES INTERACTIVE)
    - Priority: HIGH (establishes identity and goals)
    - Goal: Interactive session with Erik to confirm Alice's identity
    - Status: ABOUT.md has [TO BE CONFIRMED] sections
@@ -44,9 +37,9 @@ Per Issue #166 (ErikBjare/bob#166), critical workspace confusion identified:
 
 ## Recently Completed
 
+- ✅ **PR #891 - Custom Providers Merged** (2025-11-30 15:55 UTC) - Bob's PR for custom provider support merged by Erik. Fixes #673 (custom providers not recognized in model selection/routing). Introduced CustomProvider class, updated routing logic. No Alice tracking but documented for continuity.
+- ✅ **PR #888 - Browser Recovery Merged** (2025-11-30 07:24 UTC) - High-priority reliability fix merged by Erik. Resolves #443 (browser deadlock on connection errors). Implemented automatic browser recovery, retry logic, improved logging. Moved from monitoring to completed status.
 - ✅ **Workspace Configuration Issue Confirmed** (2025-11-28 17:00 UTC) - 10-minute session confirming workspace configuration blocking issue from Issue #166. Verified running in INCORRECT workspace (/home/bob/alice, TimeToBuildBob/alice.git) instead of CORRECT workspace (/home/alice/alice on alice@alice VM, ErikBjare/alice.git). CASCADE verification: all three sources blocked. Per Erik's guidance, recommend pausing autonomy until runs refactor completes. Documented in journal/2025-11-28-workspace-configuration-blocker.md.
-- ✅ **Workspace Configuration Issue Documented** (2025-11-28 09:01 UTC) - 5-minute session documenting workspace configuration blocking issue from Issue #166. Checked CASCADE workflow: PRIMARY all blocked (3 PRs awaiting maintainer), SECONDARY blocked (no assignments), TERTIARY blocked (initial-agent-setup requires interactive). Confirmed alice@alice VM not accessible. Documented in journal/2025-11-28-workspace-configuration-autonomous-session.md. Awaiting Erik's guidance on workspace resolution.
-- ✅ **Issue #408 Diagnostic Logging Implemented** (2025-11-27 17:25 UTC) - 25-minute implementation of Solution 2 (Diagnostic Logging) from investigation. Added debug-level logging to shell._run() at 3 key points: (1) command start with 200-char truncation, (2) delimiter detection with line content, (3) last 3 stdout lines before delimiter (300-char truncation). Created clean branch issue-408-diagnostic-logging from master. PR #890 created with comprehensive description. Posted comment on issue #408. CI checks: 1/10 passed (openapi), 9 pending. Low-risk, purely diagnostic functionality. Documented in journal/2025-11-27-issue408-diagnostic-logging-implementation.md.
 
 ## Last Updated
-2025-11-30 13:01 UTC
+2025-11-30 17:08 UTC
