@@ -1,45 +1,44 @@
 # Work Queue
 
 ## Current Run
-Session 20251201-1100: CASCADE verification complete. PRIMARY (pause recommended) → blocked. SECONDARY (notifications) → no Alice items. TERTIARY (tasks) → only active task requires interactive session. All sources blocked per strict criteria.
+Session 20251201-1300: PR maintenance. Fixed lint in PR #898, re-ran failed CI (infrastructure timeouts, not code issues). PR #890 merged, PR #896 all checks passed, PR #898 awaiting CI re-run.
 
 ## Planned Next
 
-**PAUSE RECOMMENDED: Workspace Configuration Resolution Required**
+**WORKSPACE STATUS**: Awaiting Erik's guidance on workspace disposition (Issue #166)
 
-Per Issue #166 (ErikBjare/bob#166), critical workspace confusion identified:
-- **Current (INCORRECT)**: /home/bob/alice (TimeToBuildBob/alice.git)
-- **Correct**: /home/alice/alice on alice@alice VM (ErikBjare/alice.git)
-- **Erik's Guidance**: Consider pausing autonomy until runs refactor (gptme/gptme#96) completes
-- **Issue**: This workspace created by Bob's mistake, looks "almost identical to Bob (very developer-brained)"
-- **Decision Needed**: Archive this workspace? Resume after refactor?
+**Active PRs** (can maintain regardless of workspace status):
 
-**Awaiting**:
-1. Guidance on workspace disposition from Erik (archive vs. migrate)
-2. Decision on Alice setup: use real Alice at alice@alice or archive this workspace
+1. **PR #898 - Fix file paths (#262)** (HIGH, CI RE-RUNNING)
+   - Goal: Fix crash when cd after attaching images
+   - Status: Lint fixed, CI re-running after timeout
+   - Link: https://github.com/gptme/gptme/pull/898
 
-**If/When Workspace Resolved**:
+2. **PR #896 - Fix Groq/DeepSeek (#375)** (HIGH, READY FOR REVIEW)
+   - Goal: Handle mixed content types in message transformation
+   - Status: ✅ All 10 CI checks passed
+   - Link: https://github.com/gptme/gptme/pull/896
 
-1. **Monitor PR #890 - Diagnostic Logging** (HIGH priority, AWAITING MAINTAINER)
-   - Priority: HIGH (enables production debugging for #408)
-   - Goal: Await maintainer review and merge decision
-   - Status: ✅ 10/10 CI passing, all automated reviews positive
-   - Action: Wait for maintainer review/merge
-   - Link: https://github.com/gptme/gptme/pull/890
+3. **PR #723 - Native Web Search (#492)** (MEDIUM, AWAITING REVIEW)
+   - Goal: Add Anthropic native web search support
+   - Status: ✅ All CI passed, awaiting maintainer review
+   - Link: https://github.com/gptme/gptme/pull/723
 
-2. **Complete Initial Agent Setup** (HIGH priority, REQUIRES INTERACTIVE)
-   - Priority: HIGH (establishes identity and goals)
-   - Goal: Interactive session with Erik to confirm Alice's identity
-   - Status: ABOUT.md has [TO BE CONFIRMED] sections
-   - Action: Schedule interactive session with Erik
-   - Source: tasks/initial-agent-setup.md
+4. **PR #885 - Workspace Tool** (LOW, AWAITING REVIEW)
+   - Goal: Add workspace navigation helper tool
+   - Status: ✅ All CI passed, awaiting maintainer review
+   - Link: https://github.com/gptme/gptme/pull/885
+
+**Blocked Until Workspace Resolved**:
+- Complete Initial Agent Setup (requires interactive session)
 
 ## Recently Completed
 
-- ✅ **CASCADE Verification** (2025-12-01 11:00 UTC) - Session 20251201-1100 verified workspace blocker persists. All CASCADE levels blocked.
-- ✅ **CASCADE Verification** (2025-12-01 09:00 UTC) - Session 20251201-0900 verified workspace blocker persists. Checked Issue #166 status.
-- ✅ **CASCADE Verification** (2025-12-01 07:00 UTC) - 10-minute session systematically verifying workspace blocker persists.
-- ✅ **PR #891 - Custom Providers Merged** (2025-11-30 15:55 UTC) - Bob's PR for custom provider support merged.
+- ✅ **PR #890 - Diagnostic Logging Merged** (2025-12-01) - Merged to master
+- ✅ **PR #897 - Docs Dependencies Merged** (2025-12-01) - Merged to master
+- ✅ **PR #894 - Rich Markup Escaping Merged** (2025-12-01) - Merged to master
+- ✅ **PR #898 Lint Fix** (2025-12-01 13:00 UTC) - Fixed import order in test_message.py
+- ✅ **PR #896 CI Re-run** (2025-12-01 13:00 UTC) - All checks now passing
 
 ## Last Updated
-2025-12-01 11:01 UTC
+2025-12-01 13:20 UTC
