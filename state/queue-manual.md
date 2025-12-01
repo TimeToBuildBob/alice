@@ -1,18 +1,18 @@
 # Work Queue
 
 ## Current Run
-Session 20251201-1500: PR #901 test fix. Fixed tmux test isolation issues - tests were colliding in parallel execution. Added worker-unique session prefixes and robust session ID parsing.
+Session 20251201-1700: PR #902 thread safety fixes. Added buffer locks, job locks, size limits, and proper test cleanup. All CI passed.
 
 ## Planned Next
 
 **WORKSPACE STATUS**: Awaiting Erik's guidance on workspace disposition (Issue #166)
 
-**Active PRs** (can maintain regardless of workspace status):
+**Active PRs**:
 
-1. **PR #901 - Tmux Wait Command (#348)** (HIGH, TESTS PASSING)
-   - Goal: Add wait command to monitor long-running commands
-   - Status: ✅ All tmux tests passing, unrelated timeout failures in CI
-   - Link: https://github.com/gptme/gptme/pull/901
+1. **PR #902 - Background Shell Jobs (#576)** (HIGH, AWAITING REVIEW)
+   - Goal: Add background job support for long-running commands
+   - Status: ✅ All CI passed, thread safety fixes addressed
+   - Link: https://github.com/gptme/gptme/pull/902
 
 2. **PR #723 - Native Web Search (#492)** (MEDIUM, AWAITING REVIEW)
    - Goal: Add Anthropic native web search support
@@ -29,12 +29,13 @@ Session 20251201-1500: PR #901 test fix. Fixed tmux test isolation issues - test
 
 ## Recently Completed
 
+- ✅ **PR #902 Thread Safety** (2025-12-01 17:14 UTC) - Buffer locks, job locks, size limits
+- ✅ **PR #901 - Tmux Wait Command Merged** (2025-12-01) - Monitor long-running commands
 - ✅ **PR #898 - Fix file paths Merged** (2025-12-01) - Fixed crash when cd after attaching images
 - ✅ **PR #896 - Fix Groq/DeepSeek Merged** (2025-12-01) - Handle mixed content types
-- ✅ **PR #890 - Diagnostic Logging Merged** (2025-12-01) - Merged to master
-- ✅ **PR #897 - Docs Dependencies Merged** (2025-12-01) - Merged to master
-- ✅ **PR #894 - Rich Markup Escaping Merged** (2025-12-01) - Merged to master
-- ✅ **PR #901 Test Fix** (2025-12-01 15:30 UTC) - Worker-unique tmux sessions for parallel tests
+- ✅ **PR #890 - Diagnostic Logging Merged** (2025-12-01)
+- ✅ **PR #897 - Docs Dependencies Merged** (2025-12-01)
+- ✅ **PR #894 - Rich Markup Escaping Merged** (2025-12-01)
 
 ## Last Updated
-2025-12-01 15:30 UTC
+2025-12-01 17:14 UTC
