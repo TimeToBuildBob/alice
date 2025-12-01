@@ -1,7 +1,7 @@
 # Work Queue
 
 ## Current Run
-Session 20251201-0700: CASCADE verification (10 min). Verified all three sources blocked per strict criteria: PRIMARY recommends pause (Issue #166 workspace config), SECONDARY no Alice notifications, TERTIARY all tasks done/blocked. Workspace configuration issue persists - running in INCORRECT workspace (/home/bob/alice vs /home/alice/alice). Documented in journal/2025-12-01-cascade-verification.md.
+Session 20251201-0900: Verified workspace blocker persists. Checked Issue #166 - confirmed this workspace (/home/bob/alice) was created by Bob's mistake. Real Alice is at alice@alice:/home/alice/alice with different focus (emotional intelligence vs developer-brained). Corrected outdated queue info: gptme/gptme#96 completed Aug 2024, not a current blocker. PR #890 still awaiting maintainer review.
 
 ## Planned Next
 
@@ -15,9 +15,11 @@ Per Issue #166 (ErikBjare/bob#166), critical workspace confusion identified:
 - **Decision Needed**: Archive this workspace? Resume after refactor?
 
 **Awaiting**:
-1. Guidance on workspace disposition (archive vs. migrate)
-2. Runs refactor completion (gptme/gptme#96)
-3. Proper Alice setup at correct location with original November 2024 goals
+1. Guidance on workspace disposition from Erik (archive vs. migrate)
+2. ~~Runs refactor completion (gptme/gptme#96)~~ - **COMPLETED** Aug 2024 (not a blocker)
+3. Decision on Alice setup: use real Alice at alice@alice or archive this workspace
+
+**Note**: Real Alice's focus is different - "personal confidante, emotional intelligence, conversation partner" vs. this workspace's developer focus.
 
 **If/When Workspace Resolved**:
 
@@ -42,4 +44,4 @@ Per Issue #166 (ErikBjare/bob#166), critical workspace confusion identified:
 - ✅ **PR #888 - Browser Recovery Merged** (2025-11-30 07:24 UTC) - High-priority reliability fix merged by Erik. Resolves #443 (browser deadlock on connection errors). Implemented automatic browser recovery, retry logic, improved logging. Moved from monitoring to completed status.
 
 ## Last Updated
-2025-12-01 07:02 UTC
+2025-12-01 09:03 UTC
