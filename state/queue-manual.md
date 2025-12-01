@@ -1,7 +1,7 @@
 # Work Queue
 
 ## Current Run
-Session 20251201-0900: Verified workspace blocker persists. Checked Issue #166 - confirmed this workspace (/home/bob/alice) was created by Bob's mistake. Real Alice is at alice@alice:/home/alice/alice with different focus (emotional intelligence vs developer-brained). Corrected outdated queue info: gptme/gptme#96 completed Aug 2024, not a current blocker. PR #890 still awaiting maintainer review.
+Session 20251201-1100: CASCADE verification complete. PRIMARY (pause recommended) → blocked. SECONDARY (notifications) → no Alice items. TERTIARY (tasks) → only active task requires interactive session. All sources blocked per strict criteria.
 
 ## Planned Next
 
@@ -16,10 +16,7 @@ Per Issue #166 (ErikBjare/bob#166), critical workspace confusion identified:
 
 **Awaiting**:
 1. Guidance on workspace disposition from Erik (archive vs. migrate)
-2. ~~Runs refactor completion (gptme/gptme#96)~~ - **COMPLETED** Aug 2024 (not a blocker)
-3. Decision on Alice setup: use real Alice at alice@alice or archive this workspace
-
-**Note**: Real Alice's focus is different - "personal confidante, emotional intelligence, conversation partner" vs. this workspace's developer focus.
+2. Decision on Alice setup: use real Alice at alice@alice or archive this workspace
 
 **If/When Workspace Resolved**:
 
@@ -39,9 +36,10 @@ Per Issue #166 (ErikBjare/bob#166), critical workspace confusion identified:
 
 ## Recently Completed
 
-- ✅ **CASCADE Verification - All Sources Blocked** (2025-12-01 07:00 UTC) - 10-minute session systematically verifying workspace blocker persists. Checked PRIMARY (state/queue-manual.md) → recommends pause, SECONDARY (notifications) → no Alice items, TERTIARY (tasks) → all done/blocked. Per strict Real Blocker Criteria, session completed appropriately. Workspace configuration Issue #166 remains critical blocker. Documented in journal/2025-12-01-cascade-verification.md.
-- ✅ **PR #891 - Custom Providers Merged** (2025-11-30 15:55 UTC) - Bob's PR for custom provider support merged by Erik. Fixes #673 (custom providers not recognized in model selection/routing). Introduced CustomProvider class, updated routing logic. No Alice tracking but documented for continuity.
-- ✅ **PR #888 - Browser Recovery Merged** (2025-11-30 07:24 UTC) - High-priority reliability fix merged by Erik. Resolves #443 (browser deadlock on connection errors). Implemented automatic browser recovery, retry logic, improved logging. Moved from monitoring to completed status.
+- ✅ **CASCADE Verification** (2025-12-01 11:00 UTC) - Session 20251201-1100 verified workspace blocker persists. All CASCADE levels blocked.
+- ✅ **CASCADE Verification** (2025-12-01 09:00 UTC) - Session 20251201-0900 verified workspace blocker persists. Checked Issue #166 status.
+- ✅ **CASCADE Verification** (2025-12-01 07:00 UTC) - 10-minute session systematically verifying workspace blocker persists.
+- ✅ **PR #891 - Custom Providers Merged** (2025-11-30 15:55 UTC) - Bob's PR for custom provider support merged.
 
 ## Last Updated
-2025-12-01 09:03 UTC
+2025-12-01 11:01 UTC
