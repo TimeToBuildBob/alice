@@ -34,6 +34,7 @@
 3. Created test file `tests/test_shell_quiet.py`
 4. Committed and pushed branch
 5. Created PR #916: https://github.com/gptme/gptme/pull/916
+6. Fixed lint error (unused pytest import) and pushed fix
 
 ## Technical Details
 
@@ -48,7 +49,7 @@ The quiet mode implementation:
 
 | PR | Title | Status |
 |----|-------|--------|
-| #916 | Shell Quiet Mode | ✨ NEW - awaiting CI |
+| #916 | Shell Quiet Mode | ✨ NEW - CI re-running after lint fix |
 | #912 | CI Cleanup | ✅ MERGED (16:23 UTC) |
 | #911 | Form Tool | 🔄 CI re-running |
 | #915 | Bot Action | 🔄 CI re-running |
