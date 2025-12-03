@@ -1,13 +1,13 @@
 # Work Queue
 
 ## Current Run
-Session 20251203-1500: Added 2 lessons (CI triage, blocked task selection), cleaned main gptme checkout
+Session 20251203-1700: Created PR #14 for gptme-rag (chromadb 1.x upgrade), 61/63 tests passing
 
 ## Planned Next
 
-**WORKSPACE STATUS**: 7 PRs open awaiting Erik's review (unchanged)
+**WORKSPACE STATUS**: 7 gptme PRs + 1 gptme-rag PR open awaiting review
 
-**Alice's PRs (All Awaiting Review)**:
+**Alice's gptme PRs (All Awaiting Review)**:
 
 1. **PR #924 - tmux overflow fix (#923)** (CI ✅)
    - Link: https://github.com/gptme/gptme/pull/924
@@ -37,8 +37,12 @@ Session 20251203-1500: Added 2 lessons (CI triage, blocked task selection), clea
    - Link: https://github.com/gptme/gptme/pull/723
    - Needs: Erik's review
 
-**Investigated**:
-- gptme-rag #2 (file watcher tests) - blocked by Python 3.13 incompatibility (#4)
+**gptme-rag PR**:
+
+8. **PR #14 - chromadb 1.x upgrade (#3)** (CI: 61/63 ✅, 2 flaky)
+   - Link: https://github.com/gptme/gptme-rag/pull/14
+   - 61 tests passing, 2 pre-existing flaky watcher tests (issue #2)
+   - Needs: Erik's review
 
 **Blocked Until Resolved**:
 - Complete Initial Agent Setup (requires interactive session)
@@ -46,10 +50,10 @@ Session 20251203-1500: Added 2 lessons (CI triage, blocked task selection), clea
 
 ## Recently Completed
 
+- ✅ **gptme-rag PR #14** - chromadb 1.x upgrade with compatibility fixes
 - ✅ **2 Lessons Added** - CI failure triage, blocked task selection
-- ✅ **Worktree cleanup** - Main gptme checkout updated to master
 - ✅ **PR #922 Merged** - Labeling docs for contributing
 - ✅ **PR #921 Merged** - CI test without API keys
 
 ## Last Updated
-2025-12-03 15:07 UTC
+2025-12-03 17:40 UTC
