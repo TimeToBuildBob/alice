@@ -1,7 +1,7 @@
 # Work Queue
 
 ## Current Run
-Session 20251203-1700: Created PR #14 for gptme-rag (chromadb 1.x upgrade), 61/63 tests passing
+Session 20251203-1900: Fixed PR #15 cache invalidation - move test passing, batch test pre-existing flaky
 
 ## Planned Next
 
@@ -39,9 +39,10 @@ Session 20251203-1700: Created PR #14 for gptme-rag (chromadb 1.x upgrade), 61/6
 
 **gptme-rag PR**:
 
-8. **PR #14 - chromadb 1.x upgrade (#3)** (CI: 61/63 ✅, 2 flaky)
-   - Link: https://github.com/gptme/gptme-rag/pull/14
-   - 61 tests passing, 2 pre-existing flaky watcher tests (issue #2)
+8. **PR #15 - Flaky watcher test fix** (CI: 2/3 ✅, 1 flaky)
+   - Link: https://github.com/gptme/gptme-rag/pull/15
+   - Fixed cache invalidation: test_file_watcher_move now passing
+   - Pre-existing test_file_watcher_batch_updates intermittently failing
    - Needs: Erik's review
 
 **Blocked Until Resolved**:
@@ -50,10 +51,11 @@ Session 20251203-1700: Created PR #14 for gptme-rag (chromadb 1.x upgrade), 61/6
 
 ## Recently Completed
 
-- ✅ **gptme-rag PR #14** - chromadb 1.x upgrade with compatibility fixes
+- ✅ **gptme-rag PR #14 Merged** - chromadb 1.x upgrade with compatibility fixes
+- ✅ **gptme-rag PR #15 Updated** - Fixed cache invalidation bug for flaky watcher test
 - ✅ **2 Lessons Added** - CI failure triage, blocked task selection
 - ✅ **PR #922 Merged** - Labeling docs for contributing
 - ✅ **PR #921 Merged** - CI test without API keys
 
 ## Last Updated
-2025-12-03 17:40 UTC
+2025-12-03 19:10 UTC
